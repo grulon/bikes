@@ -1,18 +1,19 @@
 import Bike
 
 
-my_bikeshop = Bike.BikeShop("Shop O'Bikes", {'Huffy': 10, 'Schwinn': 20}, {'Huffy':.25, 'Schwinn':.33})
+my_bikeshop = Bike.BikeShop("Shop O'Bikes", {'Huffy': 1, 'Schwinn': 2, 'ModelA':1,'Neato':1,'Turbo':1,'Junky':3}, {'Huffy': .2, 'Schwinn': .2, 'ModelA':.2,'Neato':.2,'Turbo':.2,'Junky':.2})
 
-print my_bikeshop.inventory
+Huffy = Bike.Bicycle("Huffy",10,182.00)
+Schwinn = Bike.Bicycle("Schwinn",10,800.00)
+ModelA = Bike.Bicycle("ModelA",10,900.00)
+Neato = Bike.Bicycle("Neato",8,201.00)
+Turbo = Bike.Bicycle("Turbo",10,800.00)
+Junky = Bike.Bicycle("Junky",15,90.00)
 
-print my_bikeshop.inventory.values()
-print my_bikeshop.inventory.items()
 
-print my_bikeshop.inventory['Huffy']
+cust1 = Bike.Customers("Adam",200)
+cust2 = Bike.Customers("Betty",500)
+cust3 = Bike.Customers("Charlie",1000)
 
-print 'We have ', my_bikeshop.inventory['Huffy'], ' Huffys in stock.  We mark them up by ', my_bikeshop.margin['Huffy'], ' percent'
 
-what_i_cleared = my_bikeshop.profit({'Huffy':5, 'Schwinn': 3},{'Huffy': 10, 'Schwinn': 20}, {'Huffy':.25, 'Schwinn':.33})
-
-for items,moola in what_i_cleared.items():
-	print 'The Shop made', moola, 'on the' , items
+cust1.what_can_i_buy(Neato)

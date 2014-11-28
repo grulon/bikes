@@ -24,8 +24,11 @@ class Customers(object):
 	def __init__(self,name,bike_fund):
 		self.name = name
 		self.bike_fund = bike_fund
-	def can_buy(self,model):
-		pass
+	def what_can_i_buy(self,model):
+		if self.bike_fund > model.production_cost:
+			print '>'
+		else:
+			print '<'
 		
 
 
