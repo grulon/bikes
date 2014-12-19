@@ -1,3 +1,5 @@
+import Bike
+
 ### Junk testing goes here.... 
 my_bikeshop = Bike.BikeShop("Shop O'Bikes", {'Huffy': 10, 'Schwinn': 20}, {'Huffy':.25, 'Schwinn':.33})
 
